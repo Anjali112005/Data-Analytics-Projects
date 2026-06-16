@@ -6,6 +6,8 @@ A collection of data analytics projects focused on data cleaning, exploratory da
 
 ## E-Commerce Data Cleaning & Sales Analytics Dashboard
 
+![Dashboard Preview](ECommerce_Data_Cleaning/PowerBI_Dashboard/ECommerce_Sales_Dashboard.jpg)
+
 ### Project Overview
 
 This project demonstrates the complete data analytics workflow, from cleaning raw data to building an interactive Power BI dashboard.

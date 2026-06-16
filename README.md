@@ -1,308 +1,198 @@
-# 📊 E-Commerce Sales Data Analysis & Dashboard
+# Data Analytics Projects
 
-## Dashboard Preview
-
-<p align="center">
-  <img src="graphs/pro_dashboard.png" width="900">
-</p>
+A collection of data analytics projects focused on data cleaning, exploratory data analysis (EDA), data visualization, and business intelligence reporting.
 
 ---
 
-## 📌 Project Overview
+## E-Commerce Data Cleaning & Sales Analytics Dashboard
 
-This project focuses on Exploratory Data Analysis (EDA) of a cleaned E-Commerce Sales dataset containing 1,200 customer orders. The dataset was cleaned and validated during **Task 1 – Data Cleaning & Preparation** before being used for analysis and visualization.
+### Project Overview
 
-The objective of this project is to identify sales patterns, customer purchasing behavior, product performance, payment preferences, and revenue trends. A professional Power BI–style dashboard was created using Python and Matplotlib to present key business insights.
+This project demonstrates the complete data analytics workflow, from cleaning raw data to building an interactive Power BI dashboard.
 
----
-
-## 🎯 Objectives
-
-- Analyze sales and revenue trends
-- Identify top-selling products
-- Study customer payment preferences
-- Evaluate monthly revenue performance
-- Detect outliers in sales data
-- Generate actionable business insights
-- Build a professional analytics dashboard using Python
+The objective was to transform a raw e-commerce dataset into a clean, reliable, and analysis-ready dataset while generating meaningful business insights through visualization and reporting.
 
 ---
 
-## 🔄 Data Analytics Workflow
+## Project Workflow
 
 Raw Dataset
-
-⬇️
-
-Task 1: Data Cleaning & Preparation
-
-⬇️
-
-Cleaned Dataset
-
-⬇️
-
-Task 2: Exploratory Data Analysis (EDA)
-
-⬇️
-
-Dashboard & Business Insights
-
-This repository represents the second phase of the analytics workflow, where a cleaned dataset was analyzed to uncover trends, patterns, and business insights.
+⬇
+Data Cleaning & Validation
+⬇
+Exploratory Data Analysis (EDA)
+⬇
+Data Visualization
+⬇
+Power BI Dashboard
+⬇
+Business Insights
 
 ---
 
-## 📂 Dataset Information
+## Dataset Information
 
-The dataset contains 1,200 records and 14 columns.
+The dataset contains e-commerce transaction records including:
 
-### Features
+* Order ID
+* Customer Information
+* Product Details
+* Quantity Purchased
+* Unit Price
+* Payment Method
+* Order Status
+* Marketing Channel
+* Revenue Information
 
-- OrderID
-- Date
-- CustomerID
-- Product
-- Quantity
-- UnitPrice
-- ShippingAddress
-- PaymentMethod
-- OrderStatus
-- TrackingNumber
-- ItemsInCart
-- CouponCode
-- ReferralSource
-- TotalPrice
+**Dataset Size**
 
-### Dataset Size
-
-- Rows: 1200
-- Columns: 14
-
-### Dataset Source
-
-The dataset used in this project is the cleaned dataset generated during **Task 1 – Data Cleaning & Preparation**.
+* Records: 1,200
+* Columns: 14
 
 ---
 
-## 🛠️ Technologies Used
+## Data Cleaning Tasks
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- OpenPyXL
-- VS Code
-- Git
-- GitHub
+### Missing Value Handling
 
----
+* Identified missing values across all columns.
+* Replaced missing values in `CouponCode` with `"No Coupon"`.
 
-## 📈 Exploratory Data Analysis (EDA)
+### Duplicate Detection
 
-The following analyses were performed:
+* Checked duplicate rows.
+* Verified duplicate Order IDs.
+* Verified duplicate Tracking Numbers.
 
-### Data Exploration
+### Data Validation
 
-- Dataset inspection
-- Data type analysis
-- Dataset structure analysis
-- Data validation checks
+Validated business rules:
 
-### Statistical Analysis
+* Quantity > 0
+* UnitPrice > 0
+* TotalPrice > 0
+* ItemsInCart > 0
 
-- Mean, Median, Standard Deviation
-- Revenue distribution analysis
-- Descriptive statistics
+### Data Consistency Checks
 
-### Product Analysis
+Verified:
 
-- Top-selling products
-- Product order frequency analysis
+```python
+TotalPrice = Quantity * UnitPrice
+```
 
-### Revenue Analysis
-
-- Total Revenue
-- Average Order Value
-- Monthly Revenue Trends
-
-### Customer Behavior Analysis
-
-- Payment Method Preferences
-- Referral Source Analysis
-
-### Outlier Detection
-
-- Identification of unusual order values using the IQR method
+and corrected inconsistencies where required.
 
 ---
 
-## 📊 Dashboard Features
+## Exploratory Data Analysis (EDA)
 
-The dashboard provides:
+Performed analysis on:
 
-✅ Total Revenue KPI
-
-✅ Total Orders KPI
-
-✅ Average Order Value KPI
-
-✅ Top Product KPI
-
-✅ Monthly Revenue Trend
-
-✅ Product-wise Order Distribution
-
-✅ Payment Method Distribution
-
-✅ Professional Business Dashboard Layout
+* Revenue Distribution
+* Monthly Revenue Trends
+* Product Performance
+* Payment Method Distribution
+* Customer Behavior
+* Marketing Channel Performance
 
 ---
 
-## 📌 Key Findings
+## Power BI Dashboard
 
-| Metric              | Value         |
-| ------------------- | ------------- |
-| Total Revenue       | ₹1,264,761.96 |
-| Total Orders        | 1200          |
-| Average Order Value | ₹1053.97      |
-| Top Product         | Printer       |
+The cleaned dataset was imported into Power BI to create an interactive sales analytics dashboard.
 
-### Top Products
+### Dashboard Highlights
 
-1. Printer
-2. Tablet
-3. Chair
-4. Laptop
-5. Desk
+#### KPI Metrics
 
-### Most Preferred Payment Method
+* Total Revenue
+* Total Orders
+* Total Customers
+* Average Order Value
+* Quantity Sold
+* Revenue per Customer
 
-- Online Payment
+#### Visualizations
+
+* Monthly Revenue Trend Analysis
+* Top Products by Revenue
+* Revenue by Marketing Channel
+* Revenue by Payment Method
+* Interactive Filters for Order Status
+* Interactive Filters for Payment Method
+
+### Skills Demonstrated
+
+* Power BI Dashboard Development
+* Data Cleaning & Data Modeling
+* DAX Measures & Calculations
+* KPI Design and Business Metrics
+* Interactive Slicers and Filters
+* Data Visualization Best Practices
+* Business Intelligence Reporting
+* Dashboard Layout & Design
 
 ---
 
-## 📁 Project Structure
+## Technologies Used
+
+* Python
+* Pandas
+* Microsoft Excel
+* Power BI
+* Visual Studio Code
+
+---
+
+## Repository Structure
 
 ```text
-PROJECT_2_EDA
+Data-Analytics-Projects
 │
-├── cleaned_dataset.xlsx
-├── eda.py
-├── dashboard.py
-├── EDA_Report.docx
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
 │
-├── graphs
-│   ├── monthly_revenue.png
-│   ├── payment_methods.png
-│   ├── product_orders.png
-│   ├── revenue_distribution.png
-│   └── pro_dashboard.png
+├── ECommerce_Data_Cleaning
+│   ├── raw_dataset.xlsx
+│   ├── cleaned_dataset.xlsx
+│   ├── data_cleaning.py
+│   ├── exploratory_data_analysis.py
+│   ├── dashboard_visualizations.py
+│   ├── Data_Cleaning_Report.docx
+│   │
+│   ├── PowerBI_Dashboard
+│   │   ├── ECommerce_Sales_Dashboard.pbix
+│   │   └── ECommerce_Sales_Dashboard.jpg
+│   │
+│   └── Visualizations
+│       ├── monthly_revenue_trend.png
+│       ├── payment_method_distribution.png
+│       ├── product_sales_analysis.png
+│       ├── revenue_distribution.png
+│       └── dashboard_preview.png
 ```
 
 ---
 
-## 🚀 How to Run the Project
+## Key Skills
 
-### Clone Repository
-
-```bash
-git clone <repository-link>
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Required Dataset
-
-Place the file:
-
-```text
-cleaned_dataset.xlsx
-```
-
-inside the project root directory.
-
-### Run EDA Analysis
-
-```bash
-python eda.py
-```
-
-### Run Dashboard
-
-```bash
-python dashboard.py
-```
+* Data Cleaning
+* Data Validation
+* Data Transformation
+* Exploratory Data Analysis (EDA)
+* Data Visualization
+* Business Intelligence
+* Dashboard Development
+* KPI Reporting
+* Power BI
+* Python Programming
 
 ---
 
-## 📷 Generated Visualizations
-
-The project generates the following visualizations:
-
-- Monthly Revenue Trend
-- Product Orders Analysis
-- Payment Method Distribution
-- Revenue Distribution Histogram
-- Professional Analytics Dashboard
-
-All visualizations are stored inside the **graphs** folder.
-
----
-
-## 💡 Business Insights
-
-- Revenue exceeded ₹1.26 Million across 1,200 orders.
-- Printer emerged as the highest-selling product.
-- Online payments were the most preferred payment method.
-- Monthly revenue showed noticeable fluctuations indicating seasonal purchasing behavior.
-- Average order value remained above ₹1,000, indicating healthy customer spending patterns.
-
----
-
-## 🎯 Skills Demonstrated
-
-- Data Cleaning Awareness
-- Exploratory Data Analysis (EDA)
-- Data Visualization
-- Statistical Analysis
-- Dashboard Development
-- Business Insight Generation
-- Python Programming
-- Git & GitHub
-
----
-
-## 👩‍💻 Author
+## Author
 
 **Anjali Neelam**
 
-Aspiring Data Analyst | Python Enthusiast | Frontend Developer
-
-**Skills**
-
-- Python
-- Pandas
-- NumPy
-- SQL
-- HTML
-- CSS
-- JavaScript
-- Data Analytics
-- Data Visualization
-
-**GitHub:** https://github.com/anjali112005
-
----
-
-## ⭐ Project Outcome
-
-This project demonstrates practical data analytics skills by transforming cleaned transactional data into meaningful business insights through statistical analysis, visualizations, and dashboard reporting.
-
-It serves as a beginner-to-intermediate level Data Analytics portfolio project showcasing end-to-end Exploratory Data Analysis (EDA) and dashboard creation using Python.
+Data Analytics Enthusiast | Python | Power BI | Data Visualization

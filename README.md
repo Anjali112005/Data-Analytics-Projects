@@ -18,17 +18,19 @@ The objective was to transform a raw e-commerce dataset into a clean, reliable, 
 
 ## Project Workflow
 
+```text
 Raw Dataset
-⬇
+    ↓
 Data Cleaning & Validation
-⬇
+    ↓
 Exploratory Data Analysis (EDA)
-⬇
+    ↓
 Data Visualization
-⬇
+    ↓
 Power BI Dashboard
-⬇
+    ↓
 Business Insights
+```
 
 ---
 
